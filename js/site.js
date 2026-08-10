@@ -152,7 +152,7 @@ const REELS = [
 const FOOTER_HTML = `
   <footer class="footer" id="contact-footer">
     <div class="ft-inner">
-      <p class="ft-sub reveal">From first frame to final grade — I help ambitious teams turn ideas into work that looks sharp, moves well, and gets remembered.</p>
+      <p class="ft-sub reveal">From first frame to final grade I help ambitious teams turn ideas into work that looks sharp, moves well, and gets remembered.</p>
       <h2 class="ft-head"><button class="ft-head-btn" type="button" data-contact-open>Let's roll.</button></h2>
     </div>
 
@@ -163,7 +163,6 @@ const FOOTER_HTML = `
         <div class="cr-playhead" id="cr-playhead"></div>
         <div class="cr-fx" id="cr-fx"></div>
       </div>
-      <div class="cr-swatches" id="cr-swatches"></div>
     </div>
 
     <div class="ft-bottom">
@@ -441,14 +440,14 @@ function initCuttingRoom() {
     framesEl.appendChild(f);
     return f;
   });
-  // build swatches
-  const swatches = SWATCHES.map(hex => {
+  // build swatches (removed from the UI — no-op if the container is absent)
+  const swatches = swatchesEl ? SWATCHES.map(hex => {
     const s = document.createElement('div');
     s.className = 'cr-swatch'; s.style.background = hex;
     s.innerHTML = `<span>${hex.toUpperCase()}</span>`;
     swatchesEl.appendChild(s);
     return s;
-  });
+  }) : [];
 
   // scrub cursor (clapper/playhead) that follows pointer over the footer
   let cursor = null, tipX = 22, tipY = 6;
