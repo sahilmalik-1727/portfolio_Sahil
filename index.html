@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahil Malik — Video Editor, Designer & Creative Developer</title>
+  <meta name="description" content="Sahil Malik is a Toronto-based creative working across video editing, VFX, design and web development. From first frame to final grade — work that looks sharp and gets remembered." />
+  <link rel="icon" href="image/logo.png" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+  <script>if(localStorage.getItem('theme')==='night')document.body.classList.add('night');</script>
+
+  <!-- Film countdown loader -->
+  <div id="page-loader">
+    <div class="pl-leader">
+      <div class="pl-ring"></div>
+      <div class="pl-cross"></div>
+      <div class="pl-sweep"></div>
+      <div class="pl-num">3</div>
+    </div>
+    <div class="pl-label">Loading the reel…</div>
+  </div>
+
+  <site-nav></site-nav>
+
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" data-navbg="light">
+      <div class="hero-bg" aria-hidden="true" data-parallax="40"></div>
+
+      <!-- Full-bleed background video.
+           • YouTube (default): set data-yt to your video ID. Muted + looped.
+           • MP4 fallback: drop a file at assets/herovideo.mp4 and set
+             data-video="assets/herovideo.mp4" (takes priority if present). -->
+      <div class="hero-video" id="hero-video" aria-hidden="true"
+           data-yt="QZhiPI7TCx4"
+           data-video="assets/herovideo.mp4">
+        <div class="hv-frame" id="hv-frame"></div>
+        <div class="hv-scrim"></div>
+        <div class="hv-grain"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow reveal">Video · VFX · Design · Web</span>
+          <h1 class="reveal" style="--reveal-delay:.08s">
+            I make
+            <span class="rotator-wrap"><span class="rotator">
+              <span class="word show">cinematic edits.</span>
+              <span class="word">bold designs.</span>
+              <span class="word">clean interfaces.</span>
+              <span class="word">living websites.</span>
+            </span></span>
+          </h1>
+          <p class="hero-lead reveal" style="--reveal-delay:.16s">
+            I turn bold ideas into work that looks stunning, feels effortless, and actually
+            performs. Based in Toronto — let's build something great together.
+          </p>
+          <div class="hero-actions reveal" style="--reveal-delay:.24s">
+            <a href="work.html" class="btn btn-primary">View my work <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="btn btn-ghost" data-modal data-type="youtube" data-src="ZdP7jWkDmus" data-title="Sahil Malik — Demo Reel 2026" data-tag="Showreel">
+              <i class="fa-solid fa-play"></i> Watch showreel
+            </button>
+          </div>
+          <div class="hero-meta reveal" style="--reveal-delay:.32s">
+            <span class="avail"><span class="live"></span> Open to work</span>
+            <span><i class="fa-solid fa-location-dot"></i> Toronto, Canada</span>
+            <span><i class="fa-solid fa-clapperboard"></i> 2+ years</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal" style="--reveal-delay:.16s">
+          <div class="portrait-frame" data-hero-depth="10">
+            <span class="portrait-glow" aria-hidden="true"></span>
+            <img src="image/sahil.jpeg" alt="Portrait of Sahil Malik" />
+          </div>
+          <span class="float-tag t1" data-hero-depth="26"><i class="fa-solid fa-clapperboard"></i> Editor</span>
+          <span class="float-tag t2" data-hero-depth="34"><i class="fa-solid fa-wand-magic-sparkles"></i> VFX Artist</span>
+          <span class="float-tag t3" data-hero-depth="20"><i class="fa-solid fa-palette"></i> Designer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MARQUEE ═══ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Video Editing <span class="star">✦</span></span>
+        <span class="marquee-item">Motion Design <span class="star">✦</span></span>
+        <span class="marquee-item">UI / UX <span class="star">✦</span></span>
+        <span class="marquee-item">VFX &amp; Graphics <span class="star">✦</span></span>
+        <span class="marquee-item">Branding <span class="star">✦</span></span>
+        <span class="marquee-item">Web Development <span class="star">✦</span></span>
+        <span class="marquee-item">Video Editing <span class="star">✦</span></span>
+        <span class="marquee-item">Motion Design <span class="star">✦</span></span>
+        <span class="marquee-item">UI / UX <span class="star">✦</span></span>
+        <span class="marquee-item">VFX &amp; Graphics <span class="star">✦</span></span>
+        <span class="marquee-item">Branding <span class="star">✦</span></span>
+        <span class="marquee-item">Web Development <span class="star">✦</span></span>
+      </div>
+    </div>
+
+    <!-- ═══ STATS ═══ -->
+    <section class="section container">
+      <div class="stats">
+        <div class="stat card reveal"><div class="num"><span data-count="8" data-suffix="+">0</span></div><div class="lbl">Software tools</div></div>
+        <div class="stat card reveal" style="--reveal-delay:.08s"><div class="num"><span data-count="15" data-suffix="+">0</span></div><div class="lbl">Projects shipped</div></div>
+        <div class="stat card reveal" style="--reveal-delay:.16s"><div class="num"><span data-count="100" data-suffix="%">0</span></div><div class="lbl">Dedication</div></div>
+        <div class="stat card reveal" style="--reveal-delay:.24s"><div class="num"><span data-count="2" data-suffix="+">0</span></div><div class="lbl">Years experience</div></div>
+      </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section class="section container" id="skills">
+      <div class="skills-wrap">
+        <div class="reveal">
+          <span class="eyebrow">What I bring</span>
+          <h2 class="section-title">One creative,<br><span class="grad-text">the whole pipeline</span></h2>
+          <p class="section-lead">Most people pick one lane. I work across the edit bay, the design board and the camera — so an idea keeps its shape from first frame to final export.</p>
+          <div class="traits">
+            <span class="trait">Problem Solver</span>
+            <span class="trait">Detail-Oriented</span>
+            <span class="trait">Fast Learner</span>
+            <span class="trait">Team Player</span>
+            <span class="trait">Creative Thinker</span>
+          </div>
+        </div>
+        <div class="tools-grid">
+          <div class="tool reveal"><span class="ic ic-pr">Pr</span><span class="nm">Premiere Pro<small>Video Editing</small></span></div>
+          <div class="tool reveal" style="--reveal-delay:.06s"><span class="ic ic-ae">Ae</span><span class="nm">After Effects<small>Motion</small></span></div>
+          <div class="tool reveal" style="--reveal-delay:.12s"><span class="ic ic-ps">Ps</span><span class="nm">Photoshop<small>Design & Photo</small></span></div>
+          <div class="tool reveal"><span class="ic ic-ai">Ai</span><span class="nm">Illustrator<small>Vector & Logos</small></span></div>
+          <div class="tool reveal" style="--reveal-delay:.06s"><span class="ic ic-id">Id</span><span class="nm">InDesign<small>Layout</small></span></div>
+          <div class="tool reveal" style="--reveal-delay:.12s"><span class="ic ic-fig"><i class="fa-brands fa-figma"></i></span><span class="nm">Figma<small>UI / UX</small></span></div>
+          <div class="tool reveal"><span class="ic ic-js"><i class="fa-brands fa-js"></i></span><span class="nm">JavaScript<small>Development</small></span></div>
+          <div class="tool reveal" style="--reveal-delay:.06s"><span class="ic ic-css"><i class="fa-brands fa-css3-alt"></i></span><span class="nm">CSS<small>Development</small></span></div>
+          <div class="tool reveal" style="--reveal-delay:.12s"><span class="ic ic-more"><i class="fa-solid fa-wand-magic-sparkles"></i></span><span class="nm">& more<small>Always learning</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SHOWREEL BAND ═══ -->
+    <section class="section container">
+      <div class="reel-band reveal" data-navbg="dark">
+        <span class="grain-ov" aria-hidden="true"></span>
+        <div class="inner">
+          <div>
+            <span class="eyebrow">Demo Reel · 2026</span>
+            <h2>See the work in motion</h2>
+            <p>A fast cut of recent edits, motion pieces and shots. Press play — it's the quickest way to get the vibe.</p>
+          </div>
+          <button class="play-btn" aria-label="Play demo reel" data-modal data-type="youtube" data-src="ZdP7jWkDmus" data-title="Sahil Malik — Demo Reel 2026" data-tag="Showreel">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FEATURED WORK ═══ -->
+    <section class="section container">
+      <div class="feat-head">
+        <div class="reveal">
+          <span class="eyebrow">Selected work</span>
+          <h2 class="section-title">Recent<br><span class="grad-text">highlights</span></h2>
+        </div>
+        <a href="work.html" class="btn btn-dark reveal" style="--reveal-delay:.08s">All projects <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="feat-grid">
+        <article class="feat-card tall reveal" data-modal data-type="youtube" data-src="xHI5IEzkCVE" data-title="Time — Short Film" data-tag="Video · Short Film" data-desc="A cinematic short film exploring time and memory through compelling visual narrative.">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/xHI5IEzkCVE/hqdefault.jpg" onerror="this.src='gallery/reel_time.jpg'" alt="Time — short film" /></div>
+          <div class="body"><span class="k">Video · Short Film</span><h3>Time</h3><span class="go">Watch film <i class="fa-solid fa-play"></i></span></div>
+        </article>
+        <article class="feat-card reveal" style="--reveal-delay:.08s" data-modal data-type="iframe" data-src="https://www.behance.net/embed/project/247480001?ilo0=1" data-title="Naturcycle — Skincare App" data-tag="UI / UX · Case Study" data-desc="Interactive prototype and full UX case study for a skincare app focused on natural ingredients and clean UX." data-link="https://www.figma.com/proto/FzJ0Y0YW6ZBfLAjS8AAeF2/final-frames?node-id=36-579" data-link-label="Open Figma prototype">
+          <div class="thumb"><img src="gallery/prototype.png" alt="Naturcycle app" /></div>
+          <div class="body"><span class="k">UI / UX · Prototype</span><h3>Naturcycle</h3><span class="go">View case study <i class="fa-solid fa-arrow-right"></i></span></div>
+        </article>
+        <article class="feat-card reveal" style="--reveal-delay:.16s" data-modal data-type="image" data-src="gallery/heineken.jpg" data-title="Heineken Ad Poster" data-tag="Graphic Design" data-desc="Bold promotional poster blending typography and product photography.">
+          <div class="thumb"><img src="gallery/heineken.jpg" alt="Heineken poster" /></div>
+          <div class="body"><span class="k">Graphic Design</span><h3>Heineken Poster</h3><span class="go">View design <i class="fa-solid fa-arrow-right"></i></span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ INFINITE PROJECT CANVAS ═══ -->
+    <section class="showcase" id="showcase" data-navbg="dark">
+      <div class="sc-ambient" aria-hidden="true" data-parallax="60">
+        <span class="sc-orb o1"></span><span class="sc-orb o2"></span><span class="sc-orb o3"></span>
+      </div>
+      <div class="sc-head container">
+        <span class="eyebrow center reveal">Endless work</span>
+        <h2 class="section-title reveal" style="--reveal-delay:.06s">Drag around<br><span class="grad-text">the whole studio</span></h2>
+        <p class="section-lead sc-lead reveal" style="--reveal-delay:.12s">Every project, tiled into an infinite canvas. Grab it and drag any direction — it never ends. Tap any tile to open it.</p>
+      </div>
+
+      <!-- JS fills this with an endlessly-wrapping grid of project tiles -->
+      <div class="infinite-canvas" id="infinite-canvas" aria-label="Draggable infinite gallery of all projects — drag to explore, click a tile to open">
+        <div class="ic-viewport" id="ic-viewport">
+          <div class="ic-plane" id="ic-plane"></div>
+        </div>
+        <div class="ic-hint" id="ic-hint"><i class="fa-solid fa-up-down-left-right"></i> Drag to explore</div>
+        <div class="ic-edge ic-edge-l"></div><div class="ic-edge ic-edge-r"></div>
+        <div class="ic-edge ic-edge-t"></div><div class="ic-edge ic-edge-b"></div>
+      </div>
+
+      <a href="work.html" class="sc-cta reveal">Open the full work page <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <!-- ═══ REELS SWIPER ═══ -->
+    <section class="reels" id="reels" data-navbg="light">
+      <div class="container reels-head">
+        <div>
+          <span class="eyebrow reveal">In the feed</span>
+          <h2 class="section-title reveal" style="--reveal-delay:.06s">Short-form<br><span class="grad-text">reels &amp; edits</span></h2>
+        </div>
+        <p class="section-lead reveal" style="--reveal-delay:.12s">Vertical shorts I've cut — hover to play, tap to open full-size. They slide on their own; grab and swipe to take over.</p>
+      </div>
+
+      <div class="reels-viewport" id="reels-viewport">
+        <button class="reels-nav prev" id="reels-prev" aria-label="Previous reels"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="reels-track" id="reels-track"><!-- JS fills with 6 portrait reel cards --></div>
+        <button class="reels-nav next" id="reels-next" aria-label="Next reels"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="reels-dots" id="reels-dots" aria-hidden="true"></div>
+    </section>
+
+    <!-- ═══ DISCIPLINES ═══ -->
+    <section class="section container">
+      <div class="center reveal" style="max-width:640px;margin-inline:auto;text-align:center">
+        <span class="eyebrow center">How I can help</span>
+        <h2 class="section-title">Four crafts,<br><span class="grad-text">one creative</span></h2>
+      </div>
+      <div class="disciplines" style="margin-top:40px">
+        <a class="disc reveal" href="work.html#video"><div class="n">01</div><h4>Video Editing</h4><p>Short films, brand ads, kinetic type & motion design.</p></a>
+        <a class="disc reveal" style="--reveal-delay:.08s" href="work.html#uiux"><div class="n">02</div><h4>UI / UX Design</h4><p>App & web prototypes with research-led, clean flows.</p></a>
+        <a class="disc reveal" style="--reveal-delay:.16s" href="work.html#graphic"><div class="n">03</div><h4>Graphic Design</h4><p>Posters, editorial layouts, logos & social promos.</p></a>
+        <a class="disc reveal" style="--reveal-delay:.24s" href="work.html#video"><div class="n">04</div><h4>VFX &amp; Graphics</h4><p>Broadcast lower-thirds, info cards & stinger transitions.</p></a>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

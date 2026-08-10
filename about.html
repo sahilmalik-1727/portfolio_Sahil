@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Sahil Malik</title>
+  <meta name="description" content="About Sahil Malik — a multi-disciplinary creative based in Toronto working across video, VFX, design and web development." />
+  <link rel="icon" href="image/logo.png" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+  <script>if(localStorage.getItem('theme')==='night')document.body.classList.add('night');</script>
+  <site-nav></site-nav>
+
+  <main>
+    <section class="section container" data-navbg="light">
+      <div class="about-hero">
+        <div>
+          <span class="eyebrow reveal">About me</span>
+          <h1 class="reveal" style="--reveal-delay:.08s">Hi, I'm Sahil —<br>a <span class="grad-text">creative</span> who ships.</h1>
+          <p class="lead reveal" style="--reveal-delay:.16s">I'm creative, energetic and empathetic — turning ideas into impact through design, problem-solving and storytelling. Whether collaborating or working solo, I deliver meaningful, human-centered work with passion and purpose.</p>
+          <div class="hero-actions reveal" style="--reveal-delay:.24s;margin-top:26px;display:flex;gap:14px;flex-wrap:wrap">
+            <button class="btn btn-primary" data-modal data-type="pdf" data-src="image/SAHIL RESUME.pdf" data-title="Sahil Malik — Résumé" data-tag="PDF" data-link="image/SAHIL RESUME.pdf" data-link-label="Download PDF"><i class="fa-regular fa-file-lines"></i> View résumé</button>
+            <a href="work.html" class="btn btn-ghost">See my work <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="about-portrait reveal" style="--reveal-delay:.16s">
+          <span class="glow" aria-hidden="true"></span>
+          <img src="image/sahil.jpeg" alt="Portrait of Sahil Malik" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="story">
+        <div class="k reveal">The story</div>
+        <div class="reveal" style="--reveal-delay:.08s">
+          <p class="pull">I move across <span>the edit bay, the design board and the camera</span> — so an idea never loses its shape.</p>
+          <p>Most creatives pick one lane. I found early on that the most interesting work lives where they overlap: an edit paced like a story, a poster that thinks like a UI, a site built by someone who actually shoots the photos on it.</p>
+          <p>That range is the point. It means fewer hand-offs, tighter feedback loops, and work that feels intentional at every layer — because the same person cared about the color grade, the type, and the timing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="center reveal" style="max-width:600px;margin-inline:auto;text-align:center">
+        <span class="eyebrow center">How I work</span>
+        <h2 class="section-title">The way I<br><span class="grad-text">show up</span></h2>
+      </div>
+      <div class="trait-cards" style="margin-top:40px">
+        <div class="trait-card reveal"><div class="ic"><i class="fa-solid fa-puzzle-piece"></i></div><h4>Problem Solver</h4></div>
+        <div class="trait-card reveal" style="--reveal-delay:.08s"><div class="ic"><i class="fa-solid fa-magnifying-glass"></i></div><h4>Detail-Oriented</h4></div>
+        <div class="trait-card reveal" style="--reveal-delay:.16s"><div class="ic"><i class="fa-solid fa-bolt"></i></div><h4>Fast Learner</h4></div>
+        <div class="trait-card reveal" style="--reveal-delay:.24s"><div class="ic"><i class="fa-solid fa-people-group"></i></div><h4>Team Player</h4></div>
+        <div class="trait-card reveal" style="--reveal-delay:.32s"><div class="ic"><i class="fa-solid fa-lightbulb"></i></div><h4>Creative Thinker</h4></div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="skills-wrap" style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:clamp(30px,5vw,60px);align-items:start">
+        <div class="reveal">
+          <span class="eyebrow">Toolkit</span>
+          <h2 class="section-title">Software I<br><span class="grad-text">work in</span></h2>
+          <p class="section-lead">Eight-plus tools across video, design and development — and always one more being learned.</p>
+        </div>
+        <div class="reveal" style="--reveal-delay:.08s">
+          <div class="cat-note" style="margin-bottom:16px"><span>Video & Media</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px">
+            <span class="chip"><span class="dot"></span> Premiere Pro</span>
+            <span class="chip"><span class="dot"></span> After Effects</span>
+            <span class="chip"><span class="dot"></span> Photoshop</span>
+            <span class="chip"><span class="dot"></span> Illustrator</span>
+            <span class="chip"><span class="dot"></span> InDesign</span>
+            <span class="chip"><span class="dot"></span> Figma</span>
+          </div>
+          <div class="cat-note" style="margin-bottom:16px"><span>Development</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <span class="chip"><span class="dot"></span> JavaScript</span>
+            <span class="chip"><span class="dot"></span> CSS</span>
+            <span class="chip"><span class="dot"></span> HTML</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

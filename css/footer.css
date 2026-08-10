@@ -1,0 +1,147 @@
+/* ════════════════════════════════════════════════════════════════════
+   footer.css — "The Cutting Room" signature footer.
+   An interactive editing timeline: drag the scrub cursor across the strip
+   and film frames light up + color swatches pop, throwing spark/colour
+   particles. The video+design reskin of the reference's watering-can garden.
+   ════════════════════════════════════════════════════════════════════ */
+
+.footer {
+  position: relative;
+  z-index: 12;
+  background: var(--surface-raised);
+  padding-block: clamp(72px, 10vw, 128px) 0;
+  overflow: hidden;
+  transition: background-color .5s ease;
+}
+
+/* soft top hairline + warm glow */
+.footer::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 60% at 20% 0%, rgba(255,93,59,0.10), transparent 60%),
+    radial-gradient(50% 60% at 85% 5%, rgba(255,178,62,0.10), transparent 60%);
+}
+.footer > * { position: relative; z-index: 1; }
+
+/* headline block */
+.ft-inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: 24px;
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 22px;
+}
+.ft-sub {
+  max-width: 60ch;
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.ft-head {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 12vw, 9rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  color: var(--text-heading);
+  /* scroll-scrubbed grow */
+  transform: scale(var(--ft-grow, 0.7));
+  transform-origin: center;
+  will-change: transform;
+}
+.ft-head .ft-head-btn:focus-visible { outline: 3px solid var(--text-heading); outline-offset: 10px; border-radius: 8px; }
+@media (prefers-reduced-motion: reduce) { .ft-head { transform: none; } }
+
+/* ════ THE EDITING TIMELINE ════ */
+.cutting-room {
+  position: relative;
+  margin-top: clamp(48px, 7vw, 90px);
+  padding: 0 clamp(16px, 4vw, 48px);
+}
+.cr-hint {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.cr-hint .kbd { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 8px; background: var(--glass); border: 1px solid var(--line-strong); }
+
+/* the strip is a scrubbable track */
+.cr-strip {
+  position: relative;
+  max-width: 1000px; margin-inline: auto;
+  border-radius: 16px;
+  background:
+    repeating-linear-gradient(90deg, var(--c-ink) 0 26px, transparent 26px 40px) top / 100% 14px no-repeat,
+    repeating-linear-gradient(90deg, var(--c-ink) 0 26px, transparent 26px 40px) bottom / 100% 14px no-repeat,
+    var(--surface-2);
+  border: 1px solid var(--line-strong);
+  padding: 22px 16px;
+  cursor: ew-resize;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+body.night .cr-strip {
+  background:
+    repeating-linear-gradient(90deg, #000 0 26px, transparent 26px 40px) top / 100% 14px no-repeat,
+    repeating-linear-gradient(90deg, #000 0 26px, transparent 26px 40px) bottom / 100% 14px no-repeat,
+    var(--surface-2);
+}
+
+/* the row of frames */
+.cr-frames { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; height: clamp(72px, 12vw, 104px); }
+.cr-frame {
+  position: relative; border-radius: 8px; overflow: hidden;
+  background: var(--c-ink);
+  opacity: 0.32; filter: saturate(0.5) brightness(0.75);
+  transform: scale(0.94);
+  transition: opacity .35s ease, filter .45s ease, transform .45s cubic-bezier(.2,.8,.2,1);
+}
+body.night .cr-frame { background: #0c0812; }
+.cr-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, var(--f1, #ff5d3b), var(--f2, #ffb23e)); opacity: 0; transition: opacity .45s ease; }
+.cr-frame.lit { opacity: 1; filter: saturate(1.1) brightness(1); transform: scale(1); }
+.cr-frame.lit::after { opacity: 1; }
+.cr-frame .cr-ico { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-size: 1.3rem; opacity: 0; transform: scale(.5) rotate(-8deg); transition: opacity .4s ease, transform .4s cubic-bezier(.34,1.56,.64,1); z-index: 1; }
+.cr-frame.lit .cr-ico { opacity: 0.92; transform: none; }
+
+/* playhead */
+.cr-playhead { position: absolute; top: 8px; bottom: 8px; width: 3px; background: var(--accent); border-radius: 3px; left: 0; transform: translateX(-50%); box-shadow: 0 0 14px var(--accent); pointer-events: none; opacity: 0; transition: opacity .3s ease; }
+.cr-playhead::before { content: ""; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); width: 14px; height: 14px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+.cutting-room.active .cr-playhead { opacity: 1; }
+
+/* color swatches that pop as you scrub */
+.cr-swatches { display: flex; justify-content: center; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+.cr-swatch { width: 44px; height: 44px; border-radius: 12px; transform: scale(0) rotate(-12deg); transition: transform .5s cubic-bezier(.34,1.56,.64,1); box-shadow: var(--sh-sm); position: relative; }
+.cr-swatch.pop { transform: none; }
+.cr-swatch span { position: absolute; inset: 0; display: grid; place-items: end center; padding-bottom: 4px; font-family: var(--font-mono); font-size: 0.5rem; color: rgba(255,255,255,0.9); letter-spacing: 0.04em; }
+
+/* spark / colour particle layer */
+.cr-fx { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 5; }
+.cr-spark { position: absolute; top: 0; left: 0; border-radius: 50%; will-change: transform, opacity; }
+
+/* scrub cursor (a little clapper/playhead that follows pointer over the footer) */
+.ft-cursor { position: fixed; left: 0; top: 0; z-index: 41; pointer-events: none; opacity: 0; transition: opacity .18s ease; filter: drop-shadow(0 3px 6px rgba(20,10,30,0.3)); }
+.ft-cursor.on { opacity: 1; }
+.footer.room-live { cursor: none; }
+
+/* bottom bar */
+.ft-bottom {
+  max-width: var(--maxw); margin: clamp(56px, 7vw, 90px) auto 0; padding: 28px 24px 34px;
+  border-top: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+}
+.ft-credit { font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.04em; color: var(--text-muted); }
+.ft-social { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ft-social a { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-size: 1.05rem; background: var(--glass); border: 1px solid var(--line-strong); color: var(--text-heading); transition: .25s; }
+.ft-social a:hover { background: var(--accent); color: #fff; transform: translateY(-4px); border-color: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cr-frame, .cr-swatch, .cr-frame .cr-ico { transition: none; }
+}
+
+@media (max-width: 620px) {
+  .cr-frames { height: 64px; gap: 6px; }
+  .cr-swatch { width: 38px; height: 38px; }
+  .ft-bottom { flex-direction: column; text-align: center; }
+}

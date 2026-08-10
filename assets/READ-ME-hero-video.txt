@@ -1,0 +1,34 @@
+HERO BACKGROUND VIDEO
+=====================
+
+The home page hero can play a looping background video. You have two options:
+
+OPTION A — YouTube (this is the current default)
+------------------------------------------------
+Open index.html, find the block near the top that looks like:
+
+    <div class="hero-video" id="hero-video" aria-hidden="true"
+         data-yt="ZdP7jWkDmus"
+         data-video="assets/herovideo.mp4">
+
+Change data-yt="ZdP7jWkDmus" to your own YouTube video ID (the part after
+watch?v= in a YouTube URL). The video auto-plays, muted, and loops forever.
+(Browsers require background video to be muted — that's normal.)
+
+OPTION B — Your own MP4 file (cleanest, no YouTube branding)
+------------------------------------------------------------
+Drop a video file into THIS folder named exactly:
+
+    herovideo.mp4
+
+That's it. If that file exists, the site uses it automatically instead of
+YouTube — and a self-hosted MP4 loops perfectly with zero branding or flicker.
+
+Tips for a good background loop:
+  • Keep it short (10–30s) and let it loop.
+  • 1920×1080, H.264 .mp4, ideally under ~10 MB so it loads fast.
+  • It will be muted and cover the whole hero, with a soft tint over it so the
+    headline stays readable.
+
+To turn the video OFF entirely: just delete both data-yt and data-video values
+(leave them empty), and the hero shows its warm gradient instead.
