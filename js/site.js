@@ -77,7 +77,7 @@ const CONTACT_HTML = `
     <div class="cd-body">
       <p class="cd-eyebrow"><span class="cd-dot"></span>Available for new projects</p>
       <h2 class="cd-title" id="cd-title">Let's build<br>something great.</h2>
-      <p class="cd-intro">Tell me what you're making a film, a brand, a site, a wild idea. Reach me whichever way is easiest and I'll reply within 48 hours.</p>
+      <p class="cd-intro">Tell me what you're making  a film, a brand, a site, a wild idea. Reach me whichever way is easiest and I'll reply within 48 hours.</p>
       <div class="cd-cards">
         <a class="cd-card" href="mailto:${CONTACT_EMAIL}">
           <span class="cd-card-ic ic-mail"><i class="fa-solid fa-envelope"></i></span>
