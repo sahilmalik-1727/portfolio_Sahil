@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sahil Malik  Video Editor, Designer & Creative Developer</title>
+  <title>Sahil Malik — Video Editor, Designer & Creative Developer</title>
   <meta name="description" content="Sahil Malik is a Toronto-based creative working across video editing, VFX, design and web development. From first frame to final grade work that looks sharp and gets remembered." />
   <link rel="icon" href="image/logo.png" />
   <link rel="stylesheet" href="css/site.css" />
@@ -38,7 +38,7 @@
              data-video="assets/herovideo.mp4" (takes priority if present). -->
       <div class="hero-video" id="hero-video" aria-hidden="true"
            data-yt="QZhiPI7TCx4"
-           data-video="assets/herovideo.mp4">
+           data-video="assets/hero.mp4">
         <div class="hv-frame" id="hv-frame"></div>
         <div class="hv-scrim"></div>
         <div class="hv-grain"></div>
@@ -58,7 +58,7 @@
           </h1>
           <p class="hero-lead reveal" style="--reveal-delay:.16s">
             I turn bold ideas into work that looks stunning, feels effortless, and actually
-            performs. Based in Toronto, let's build something great together.
+            performs. Based in Toronto let's build something great together.
           </p>
           <div class="hero-actions reveal" style="--reveal-delay:.24s">
             <a href="work.html" class="btn btn-primary">View my work <i class="fa-solid fa-arrow-right"></i></a>
@@ -84,6 +84,8 @@
       </div>
     </section>
 
+    <!-- ═══ MARQUEE (removed) ═══ -->
+
     <!-- ═══ STATS ═══ -->
     <section class="section container">
       <div class="stats">
@@ -103,7 +105,7 @@
           <p class="section-lead">Most people pick one lane. I work across the edit bay, the design board and the camera so an idea keeps its shape from first frame to final export.</p>
           <div class="traits">
             <span class="trait">Problem Solver</span>
-            <span class="trait">Detail-Oriented</span>
+            <span class="trait">Detail Oriented</span>
             <span class="trait">Fast Learner</span>
             <span class="trait">Team Player</span>
             <span class="trait">Creative Thinker</span>
@@ -165,6 +167,23 @@
       </div>
     </section>
 
+    <!-- ═══ REELS SWIPER ═══ -->
+    <section class="reels" id="reels" data-navbg="light">
+      <div class="container reels-head">
+        <div>
+          <span class="eyebrow reveal">In the feed</span>
+          <h2 class="section-title reveal" style="--reveal-delay:.06s">Short form<br><span class="grad-text">reels &amp; edits</span></h2>
+        </div>
+      </div>
+
+      <div class="reels-viewport" id="reels-viewport">
+        <button class="reels-nav prev" id="reels-prev" aria-label="Previous reels"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="reels-track" id="reels-track"><!-- JS fills with 6 portrait reel cards --></div>
+        <button class="reels-nav next" id="reels-next" aria-label="Next reels"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="reels-dots" id="reels-dots" aria-hidden="true"></div>
+    </section>
+
     <!-- ═══ INFINITE PROJECT CANVAS ═══ -->
     <section class="showcase" id="showcase" data-navbg="dark">
       <div class="sc-ambient" aria-hidden="true" data-parallax="60">
@@ -173,7 +192,6 @@
       <div class="sc-head container">
         <span class="eyebrow center reveal">Endless work</span>
         <h2 class="section-title reveal" style="--reveal-delay:.06s">Drag around<br><span class="grad-text">the whole studio</span></h2>
-        <p class="section-lead sc-lead reveal" style="--reveal-delay:.12s">Every project, tiled into an infinite canvas. Grab it and drag any direction it never ends. Tap any tile to open it.</p>
       </div>
 
       <!-- JS fills this with an endlessly-wrapping grid of project tiles -->
@@ -189,24 +207,6 @@
       <a href="work.html" class="sc-cta reveal">Open the full work page <i class="fa-solid fa-arrow-right"></i></a>
     </section>
 
-    <!-- ═══ REELS SWIPER ═══ -->
-    <section class="reels" id="reels" data-navbg="light">
-      <div class="container reels-head">
-        <div>
-          <span class="eyebrow reveal">In the feed</span>
-          <h2 class="section-title reveal" style="--reveal-delay:.06s">Short-form<br><span class="grad-text">reels &amp; edits</span></h2>
-        </div>
-        <p class="section-lead reveal" style="--reveal-delay:.12s"></p>
-      </div>
-
-      <div class="reels-viewport" id="reels-viewport">
-        <button class="reels-nav prev" id="reels-prev" aria-label="Previous reels"><i class="fa-solid fa-chevron-left"></i></button>
-        <div class="reels-track" id="reels-track"><!-- JS fills with 6 portrait reel cards --></div>
-        <button class="reels-nav next" id="reels-next" aria-label="Next reels"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-      <div class="reels-dots" id="reels-dots" aria-hidden="true"></div>
-    </section>
-
     <!-- ═══ DISCIPLINES ═══ -->
     <section class="section container">
       <div class="center reveal" style="max-width:640px;margin-inline:auto;text-align:center">
@@ -215,9 +215,9 @@
       </div>
       <div class="disciplines" style="margin-top:40px">
         <a class="disc reveal" href="work.html#video"><div class="n">01</div><h4>Video Editing</h4><p>Short films, brand ads, kinetic type & motion design.</p></a>
-        <a class="disc reveal" style="--reveal-delay:.08s" href="work.html#uiux"><div class="n">02</div><h4>UI / UX Design</h4><p>App & web prototypes with research-led, clean flows.</p></a>
+        <a class="disc reveal" style="--reveal-delay:.08s" href="work.html#uiux"><div class="n">02</div><h4>UI / UX Design</h4><p>App & web prototypes with research led, clean flows.</p></a>
         <a class="disc reveal" style="--reveal-delay:.16s" href="work.html#graphic"><div class="n">03</div><h4>Graphic Design</h4><p>Posters, editorial layouts, logos & social promos.</p></a>
-        <a class="disc reveal" style="--reveal-delay:.24s" href="work.html#video"><div class="n">04</div><h4>VFX &amp; Graphics</h4><p>Broadcast lower-thirds, info cards & stinger transitions.</p></a>
+        <a class="disc reveal" style="--reveal-delay:.24s" href="work.html#video"><div class="n">04</div><h4>VFX &amp; Graphics</h4><p>Broadcast lower thirds, info cards & stinger transitions.</p></a>
       </div>
     </section>
   </main>

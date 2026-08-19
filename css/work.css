@@ -43,3 +43,13 @@
   .filters { position: static; }
   .work-card .desc { max-height: 90px; opacity: 1; margin-top: 8px; }
 }
+
+/* ── Live website preview thumbnails (Web cards) ── */
+.work-card .thumb .site-frame {
+  position: absolute; top: 0; left: 0;
+  transform-origin: top left;
+  transform: scale(0.42);                /* JS recomputes exact scale per card width */
+  border: 0; pointer-events: none;       /* non-interactive: card handles clicks */
+  background: var(--c-ink);
+}
+.work-card .thumb .frame-shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(14,11,20,0) 55%, rgba(14,11,20,.15)); }

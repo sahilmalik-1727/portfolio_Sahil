@@ -27,5 +27,23 @@
     }));
     const hash = location.hash.replace('#', '');
     if (hash) { const t = btns.find(b => b.dataset.filter === hash); if (t) t.click(); }
+
+    // ── scale live website iframes to fill their card ──
+    const BASE_W = 1280;
+    function scaleFrames() {
+      $$('.work-card.web-live').forEach(card => {
+        const frame = card.querySelector('.site-frame');
+        if (!frame) return;
+        const w = card.clientWidth;
+        const s = w / BASE_W;
+        frame.style.transform = `scale(${s})`;
+        frame.style.width = BASE_W + 'px';
+        frame.style.height = Math.round(w / (4 / 5) / s) + 'px'; // fill 4:5 card height in unscaled px
+        card.dataset.baseScale = s.toFixed(4);
+      });
+    }
+    scaleFrames();
+    window.addEventListener('resize', scaleFrames);
+    window.addEventListener('load', scaleFrames);
   });
 })();

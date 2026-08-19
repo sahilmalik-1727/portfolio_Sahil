@@ -231,9 +231,8 @@
 
 /* ════ REELS SWIPER ════ */
 .reels { padding-block: clamp(64px, 9vw, 120px); position: relative; overflow: hidden; }
-.reels-head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: end; margin-bottom: 40px; }
-.reels-head .section-lead { margin-top: 0; }
-@media (max-width: 760px) { .reels-head { grid-template-columns: 1fr; } }
+.reels-head { margin-bottom: 40px; }
+@media (max-width: 760px) { .reels-head { } }
 
 .reels-viewport { position: relative; overflow: hidden; padding: 6px 0; touch-action: pan-y; cursor: grab; }
 .reels-viewport:active { cursor: grabbing; }

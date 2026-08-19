@@ -12,7 +12,7 @@ const SOCIALS = {
   instagram: 'https://instagram.com/sahil_malik1727',
   youtube:   'https://www.youtube.com/@sahil_1.7.2.7',
   behance:   'https://www.behance.net/sahilmalik42',
-  linkedin:  'https://www.linkedin.com/in/sahil-26a2b3238/',
+  linkedin:  'https://www.linkedin.com/in/sahil-malik1727',
   whatsapp:  'https://wa.me/17426881727'
 };
 
@@ -77,7 +77,7 @@ const CONTACT_HTML = `
     <div class="cd-body">
       <p class="cd-eyebrow"><span class="cd-dot"></span>Available for new projects</p>
       <h2 class="cd-title" id="cd-title">Let's build<br>something great.</h2>
-      <p class="cd-intro">Tell me what you're making — a film, a brand, a site, a wild idea. Reach me whichever way is easiest and I'll reply within 48 hours.</p>
+      <p class="cd-intro">Tell me what you're making a film, a brand, a site, a wild idea. Reach me whichever way is easiest and I'll reply within 48 hours.</p>
       <div class="cd-cards">
         <a class="cd-card" href="mailto:${CONTACT_EMAIL}">
           <span class="cd-card-ic ic-mail"><i class="fa-solid fa-envelope"></i></span>
@@ -126,27 +126,31 @@ const PROJECTS = [
   { cat:'Kinetic Type', title:'Keep Going',      type:'youtube', src:'0yt-e44I1Bw', img:'https://i.ytimg.com/vi/0yt-e44I1Bw/hqdefault.jpg', fb:'gallery/reel_keepgoing.jpg', desc:'An energetic kinetic typography piece.' },
   { cat:'Short',        title:'Toronto',         type:'youtube', src:'-ADndC4_R50', img:'https://i.ytimg.com/vi/-ADndC4_R50/hqdefault.jpg', fb:'gallery/reel_toronto.jpg',  desc:'A short cinematic intro shot around Toronto.' },
   { cat:'Brand Ad',     title:'Solsip',          type:'youtube', src:'vMdKV20280s', img:'https://i.ytimg.com/vi/vMdKV20280s/hqdefault.jpg', fb:'gallery/reel_solsip.jpg',   desc:'A punchy brand advertisement edit.' },
-  { cat:'VFX',          title:'Boxing Broadcast',type:'youtube', src:'_kurLUGi_VI', img:'https://i.ytimg.com/vi/_kurLUGi_VI/hqdefault.jpg', fb:'gallery/boxing-vfx.jpg',    desc:'Broadcast graphics for an Olympic boxing tournament — animated lower-thirds, info cards and a stinger transition.' },
-  { cat:'UI / UX',      title:'Naturcycle',      type:'iframe',  src:'https://www.behance.net/embed/project/247480001?ilo0=1', img:'gallery/prototype.png', desc:'Skincare app — full UX case study, from research to final UI.', link:'https://www.figma.com/proto/FzJ0Y0YW6ZBfLAjS8AAeF2/final-frames?node-id=36-579', linkLabel:'Open Figma prototype', link2:'gallery/naturcycle-casestudy.pdf', link2Label:'Read case study (PDF)' },
-  { cat:'Prototype',    title:'Naturcycle Proto',type:'youtube', src:'ZdP7jWkDmus', img:'gallery/naturcycle-proto.jpg', portrait:true, desc:'A walkthrough of the Naturcycle app prototype in motion.', link:'https://www.figma.com/proto/FzJ0Y0YW6ZBfLAjS8AAeF2/final-frames?node-id=36-579', linkLabel:'Open Figma prototype' },
-  { cat:'Web',          title:'Afilife',         type:'iframe',  src:'https://sahilmalik-1727.github.io/Afilife/', img:'gallery/afilife.jpg', desc:'Your whole life, safely passed on to the people you love. One secure place to keep your accounts, assets, documents and final wishes — so if something happens to you, your family isn\u2019t left lost, locked out or guessing.', link:'https://sahilmalik-1727.github.io/Afilife/', linkLabel:'Visit live site' },
-  { cat:'Web',          title:'Clarity',         type:'iframe',  src:'https://sahilmalik-1727.github.io/clarity-website/', img:'gallery/clarity.jpg', desc:'One thing at a time. Clarity ends decision fatigue — instead of a scary to-do list, you see the single most important thing to do right now, and you can talk it through when you\u2019re stuck.', link:'https://sahilmalik-1727.github.io/clarity-website/', linkLabel:'Visit live site', link2:'gallery/clarity-casestudy.pdf', link2Label:'Read case study (PDF)' },
-  { cat:'Poster',       title:'Heineken',        type:'image',   src:'gallery/heineken.jpg',        img:'gallery/heineken.jpg',        desc:'Bold promotional poster blending type and product photography.' },
+  { cat:'VFX',          title:'Boxing Broadcast',type:'youtube', src:'_kurLUGi_VI', img:'https://i.ytimg.com/vi/_kurLUGi_VI/hqdefault.jpg', fb:'gallery/boxing-vfx.jpg',    desc:'Broadcast graphics for an Olympic boxing tournament: animated lower thirds, info cards and a stinger transition.' },
+  { cat:'UI / UX',      title:'Naturcycle',      type:'iframe',  src:'https://www.behance.net/embed/project/247480001?ilo0=1', img:'gallery/prototype.png', desc:'Skincare app with a full UX case study, from research to final UI.', link:'https://www.figma.com/proto/FzJ0Y0YW6ZBfLAjS8AAeF2/final-frames?node-id=36-579', linkLabel:'Open Figma prototype', link2:'gallery/naturcycle-casestudy.pdf', link2Label:'Read case study (PDF)' },
+  { cat:'Case Study',   title:'Naturcycle Study',type:'pdf',     src:'gallery/naturcycle-casestudy.pdf', img:'gallery/naturcycle-casestudy-thumb.jpg', desc:'The full Naturcycle UX case study: research, wireframes and final UI.', link:'gallery/naturcycle-casestudy.pdf', linkLabel:'Open PDF' },
+  { cat:'Web',          title:'Afilife',         type:'iframe',  src:'https://sahilmalik-1727.github.io/Afilife/', img:'iframe', thumb:'gallery/afilife.jpg', desc:'Your whole life, safely passed on to the people you love. One secure place to keep your accounts, assets, documents and final wishes, so if something happens to you, your family isn\u2019t left lost, locked out or guessing.', link:'https://sahilmalik-1727.github.io/Afilife/', linkLabel:'Visit live site' },
+  { cat:'Web',          title:'Clarity',         type:'iframe',  src:'https://sahilmalik-1727.github.io/clarity-website/', img:'iframe', thumb:'gallery/clarity.jpg', desc:'One thing at a time. Clarity ends decision fatigue: instead of a scary list, you see the single most important thing to do right now, and you can talk it through when you\u2019re stuck.', link:'https://sahilmalik-1727.github.io/clarity-website/', linkLabel:'Visit live site', link2:'gallery/clarity-casestudy.pdf', link2Label:'Read case study (PDF)' },
+  { cat:'Poster',       title:'Heineken',        type:'image',   src:'gallery/heineken.jpg',        img:'gallery/heineken.jpg',        desc:'Bold promotional poster blending type and product imagery.' },
   { cat:'Editorial',    title:'Magazine',        type:'image',   src:'gallery/MAGAZINE.jpg',        img:'gallery/MAGAZINE.jpg',        desc:'Editorial magazine layout with a strong grid.' },
   { cat:'Social',       title:'Bever Promo',     type:'image',   src:'gallery/Bever.png',           img:'gallery/Bever.png',           desc:'Promo social post design.' },
-  { cat:'Logo',         title:'Werewolf Icon',   type:'image',   src:'gallery/werewolf icon.jpg',   img:'gallery/werewolf icon.jpg',   desc:'Character icon / mascot mark.' },
+  { cat:'Logo',         title:'Werewolf Icon',   type:'image',   src:'gallery/werewolf icon.jpg',   img:'gallery/werewolf icon.jpg',   desc:'Character icon and mascot mark.' },
   { cat:'Logo',         title:'Bever Mark',      type:'image',   src:'gallery/Bever.png',           img:'gallery/Bever.png',           desc:'Brand mark for Bever.' },
-  { cat:'Logo',         title:'Type Mark',       type:'image',   src:'gallery/wordillustration.jpg',img:'gallery/wordillustration.jpg',desc:'Type-based logotype exploration.' }
+  { cat:'Logo',         title:'Jind Film City',  type:'image',   src:'assets/jind film city logo.png', img:'assets/jind film city logo.png', desc:'Logo for Jind Film City.' },
+  { cat:'Logo',         title:'MKS Eat Well',    type:'image',   src:'assets/mks eat well logo.png',   img:'assets/mks eat well logo.png',   desc:'Logo for MKS Eat Well.' },
+  { cat:'Logo',         title:'Raunak e Punjab', type:'image',   src:'assets/Raunak e punjab.jpg',     img:'assets/Raunak e punjab.jpg',     desc:'Logo for Raunak e Punjab.' },
+  { cat:'Logo',         title:'RFS',             type:'image',   src:'assets/RFS logo.png',            img:'assets/RFS logo.png',            desc:'Logo for RFS.' },
+  { cat:'Logo',         title:'Travel Together', type:'image',   src:'assets/travel together logo.jpg',img:'assets/travel together logo.jpg',desc:'Logo for Travel Together.' }
 ];
 
 /* ── Reels: 6 portrait shorts (real YouTube shorts IDs). ── */
 const REELS = [
-  { title:'Library Edit',  tag:'Short · Edit',      src:'3m_9qNqgCzo', img:'gallery/reel1.jpg', desc:'A self-shot piece in a library that I edited.' },
-  { title:'SM Logo MOGRT', tag:'Motion · MOGRT',    src:'lhVJ4-ASqgs', img:'gallery/reel2.jpg', desc:'My SM logo MOGRT files — animated lower-third and stinger.' },
+  { title:'Library Edit',  tag:'Short · Edit',      src:'3m_9qNqgCzo', img:'gallery/reel1.jpg', desc:'A self shot piece in a library that I edited.' },
+  { title:'SM Logo MOGRT', tag:'Motion · MOGRT',    src:'lhVJ4-ASqgs', img:'gallery/reel2.jpg', desc:'My SM logo MOGRT files: animated lower third and stinger.' },
   { title:'Joker Poster',  tag:'Motion · Poster',   src:'LG_hDCbNIXU', img:'gallery/reel3.jpg', desc:'A moving poster for the Joker movie.' },
-  { title:'VFX Reel',      tag:'Short · VFX',        src:'-fQOiJ-A4HI', img:'gallery/reel4.jpg', desc:'A short of my VFX and editing style, working on myself.' },
-  { title:'Boxing Graphics',tag:'Short · VFX',       src:'_kurLUGi_VI', img:'gallery/reel5.jpg', desc:'Broadcast graphics — lower-thirds, info cards and a stinger.' },
-  { title:'Keep Going',    tag:'Short · Kinetic',    src:'0yt-e44I1Bw', img:'gallery/reel6.jpg', desc:'A kinetic typography short edit.' }
+  { title:'VFX Reel',      tag:'Short · VFX',        src:'-fQOiJ-A4HI', img:'gallery/reel4.jpg', desc:'A short of my VFX and editing style.' },
+  { title:'Solsip Ad',     tag:'Short · Ad',         src:'jpNBl_eiWKI', img:'gallery/reel5.jpg', desc:'A brand ad edit for Solsip.' },
+  { title:'Boxing Graphics',tag:'Short · VFX',       src:'_kurLUGi_VI', img:'gallery/reel6.jpg', desc:'Broadcast graphics: lower thirds, info cards and a stinger.' }
 ];
 
 const FOOTER_HTML = `
@@ -737,8 +741,9 @@ function initInfiniteCanvas() {
           if (p.link2) { el.setAttribute('data-link2', p.link2); el.setAttribute('data-link2-label', p.link2Label || 'Open'); }
           if (p.portrait) el.setAttribute('data-portrait', 'true');
           const playIco = p.type === 'youtube' ? '<i class="fa-solid fa-play"></i>' : '<i class="fa-solid fa-arrow-up-right-from-square"></i>';
+          const imgSrc = (p.img === 'iframe') ? (p.thumb || 'gallery/afilife.jpg') : p.img;
           el.innerHTML =
-            `<img src="${p.img}"${p.fb ? ` onerror="this.onerror=null;this.src='${p.fb}'"` : ''} alt="${p.title}" loading="lazy" draggable="false">` +
+            `<img src="${imgSrc}"${p.fb ? ` onerror="this.onerror=null;this.src='${p.fb}'"` : ''} alt="${p.title}" loading="lazy" draggable="false">` +
             `<span class="ic-cap"><span class="ic-k">${p.cat}</span><span class="ic-t">${p.title}</span></span>` +
             `<span class="ic-go">${playIco}</span>`;
           frag.appendChild(el);
@@ -1104,7 +1109,7 @@ function initCharacter() {
 
 /* ════ Reels swiper ════
    6 portrait cards. Auto-advances every 4s; pauses on hover and plays that
-   reel's video inline (muted YouTube); click opens it full-size in the modal;
+   reel's video inline (muted YouTube); click opens it full size in the modal;
    drag/swipe to take over. Arrows + dots for manual control. */
 function initReels() {
   const track = $('#reels-track');

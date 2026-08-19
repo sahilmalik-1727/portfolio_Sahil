@@ -22,7 +22,7 @@ or push to **GitHub Pages**. No configuration needed.
 
 **Signature features**
 - **Background hero video** — the home hero plays a looping, muted video behind your portrait.
-  It's set to a YouTube video by default (swap the ID), or drop your own `assets/herovideo.mp4`
+  It's set to a YouTube video by default (swap the ID), or drop your own `assets/hero.mp4`
   for a perfectly clean loop. See `assets/READ-ME-hero-video.txt` for the 30-second how-to.
 - **Infinite project canvas** — the home page has a draggable canvas holding *every* project.
   Grab it and drag any direction — it tiles endlessly on all sides and never runs out. Tiles are
